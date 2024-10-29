@@ -26,17 +26,21 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Username" />
+            android:hint="  Username"
+            android:drawableLeft="@drawable/username_icon"
+            android:paddingLeft="10dp"/>
 
         <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="  Password"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/rounded_edittext"/>
+                android:background="@drawable/rounded_edittext"
+                android:drawableLeft="@drawable/password_icon"
+                android:paddingLeft="10dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -97,8 +101,7 @@
                 android:text="Don't have an account? Sign up"
                 android:layout_marginTop="40dp"
                 android:layout_gravity="center"
-                android:textColor="@color/blue"
-                />
+                android:textColor="@color/blue" />
 
 
 </LinearLayout>
