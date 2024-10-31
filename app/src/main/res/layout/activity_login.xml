@@ -70,7 +70,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="_______________________  or  ___________________________"
+                android:text="___________________________ or __________________________"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"/>
@@ -79,8 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="Continue With Google"
                 android:layout_marginTop="30dp"
-                android:textColor="@color/blue"
-                android:backgroundTint="@color/lightpink"
+                android:textColor="@color/white"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/rounded_edittext"/>
@@ -88,8 +87,7 @@
                 android:layout_width="match_parent"
                 android:text="Continue with Facebook"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blue"
-                android:backgroundTint="@color/lightpink"
+                android:textColor="@color/white"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="10dp"

@@ -37,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else if (e2.getText().toString().length()<6)
                 {
-                    e2.setError("Password must be greater than 5 letters");
+                    e2.setError("Password must be greater than 5 character");
                 } else if ((e3.getText().toString().isEmpty())) {
                     e3.setError("Please confirm Password");
                 }
@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
                     e4.setError("Please Enter the Mobile No");
 
                 } else if (e4.getText().toString().length()<10 || e4.getText().toString().length()>10) {
-                    e4.setError("Mobile no mast be 10 digits");
+                    e4.setError("Mobile no must be 10 digits");
 
                 } else if (e5.getText().toString().isEmpty()) {
                     e5.setError("Enter OTP");

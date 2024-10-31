@@ -2,6 +2,7 @@ package com.example.chatapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -13,18 +14,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView btnNav;
+    Fragment fragment=new ChatFragment();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         btnNav=findViewById(R.id.bottomNav);
-        if (savedInstanceState == null) {
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction();
-            ft.replace(R.id.container, new ChatFragment());
-            ft.commit();
-        }
+       getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
 //         btnNav.setSelectedItemId(R.id.nav_chat);
 
 
@@ -32,24 +30,15 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
                  if (item.getItemId()==R.id.nav_chat) {
-                    FragmentManager fm=getSupportFragmentManager();
-                    FragmentTransaction ft=fm.beginTransaction();
-                    ft.add(R.id.container,new ChatFragment());
-                    ft.commit();
+                    fragment=new ChatFragment();
                 }
                 else if (item.getItemId()==R.id.nav_Status){
-                    FragmentManager fm=getSupportFragmentManager();
-                    FragmentTransaction ft=fm.beginTransaction();
-                    ft.replace(R.id.container,new StatusFragment());
-                    ft.commit();
-
-                }  else if (item.getItemId()==R.id.nav_calls) {
-                    FragmentManager fm=getSupportFragmentManager();
-                    FragmentTransaction ft=fm.beginTransaction();
-                    ft.replace(R.id.container,new CallsFragment());
-                    ft.commit();
+                    fragment=new StatusFragment();
                 }
-//
+                else if (item.getItemId()==R.id.nav_calls) {
+                   fragment=new CallsFragment();
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
             }
         });
     }

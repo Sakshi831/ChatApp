@@ -6,6 +6,8 @@
             <corners android:radius="16dp" />
             <stroke android:width="2dp"
                 android:color="#E1AFD2"/>
+            <gradient android:startColor="@color/lightpink"
+                android:endColor="@color/white" />
             <padding
                 android:left="10dp"
                 android:top="10dp"
